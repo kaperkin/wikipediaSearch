@@ -1,0 +1,37 @@
+body{
+  background-color: rgb(80, 70, 219);
+  text-align: center;
+}
+
+.container{
+  min-height: 500px;
+}
+
+.content{
+  margin:20%;
+}
+
+.foot {
+  background-color: rgba(10, 10, 30, .6);
+  margin-bottom: 0;
+  margin-left: 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  position: absolute;
+}
+
+.foot p {
+  margin-bottom: 0;
+  padding-top: 6px;
+}
+
+.foot p a {
+  color: #dfdfdf;
+}
+
+.foot p a:hover, .foot p a:active {
+  color: rgb(10, 10, 30);
+}
