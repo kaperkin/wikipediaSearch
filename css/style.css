@@ -1,15 +1,54 @@
 body{
   background-color: rgb(80, 70, 219);
+  color: #fefefe;
   text-align: center;
 }
 
 .container{
-  min-height: 500px;
+  min-height: 550px;
 }
 
 .content{
-  margin:20%;
+  padding: 20% 20% 0 20%;
 }
+
+input{
+  color: #333;
+}
+
+.loading{
+  display: none;
+  margin-top: 30px;
+}
+
+.results{
+  padding-top: 30px;
+}
+
+.results a{
+  text-decoration: none;
+  color: #fefefe;
+}
+
+.results a:focus, .results a:hover{
+  color:#333;
+}
+
+.results a:focus .title, .results a:hover .title{
+  color:#fefefe;
+}
+
+.results a{
+  margin-top: 20px;
+}
+
+.title{
+  font-weight: 600;
+  font-size: 2rem;
+  color: #333;
+}
+
+
 
 .foot {
   background-color: rgba(10, 10, 30, .6);
@@ -20,7 +59,7 @@ body{
   left: 0;
   right: 0;
   height: 100px;
-  position: absolute;
+/*  position: absolute; */
 }
 
 .foot p {
