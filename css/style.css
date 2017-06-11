@@ -1,18 +1,22 @@
 /*
 To Do:
-1. key binding to enter ket for search button
-2. clear results div when search button pressed -DONE
+1. handle when there are no results. Example search: lsaifdj
+2. Move seach box and buttons up when resuts are posted
 3.
 */
 
 body{
-  background-color: rgb(80, 70, 219);
-  color: #fefefe;
+  background-color:  #8fe895;
+  color: #555;
   text-align: center;
 }
 
+.btn{
+  border-radius:10px;
+}
+
 .container{
-  min-height: 550px;
+  min-height: 560px;
 }
 
 .content{
@@ -20,7 +24,9 @@ body{
 }
 
 input{
+  border-radius: 10px;
   color: #333;
+  margin-right: 5px;
 }
 
 .loading{
@@ -34,19 +40,23 @@ input{
 
 .results a{
   text-decoration: none;
-  color: #fefefe;
+  color: #555;
 }
 
-.results a:focus, .results a:hover{
-  color:#333;
-}
-
-.results a:focus .title, .results a:hover .title{
+.results a:focus, .results a:hover, .results a:focus .title, .results a:hover .title{
   color:#fefefe;
 }
 
 .results a{
   margin-top: 20px;
+}
+
+.snippet{
+  border: 1px solid #fefefe;
+  border-radius: 10px;
+  margin:20px;
+  padding:10px;
+  background-color: rgb(163, 262, 125);
 }
 
 .title{
@@ -58,7 +68,7 @@ input{
 
 
 .foot {
-  background-color: rgba(10, 10, 30, .6);
+  background-color: rgb(63, 99, 78);
   margin-bottom: 0;
   margin-left: 0;
   width: 100%;
@@ -66,10 +76,11 @@ input{
   left: 0;
   right: 0;
   height: 100px;
-/*  position: absolute; */
+  position: absolute;
 }
 
 .foot p {
+  color:#fefefe;
   margin-bottom: 0;
   padding-top: 6px;
 }

@@ -10,7 +10,7 @@ function searchWiki(){
   loading.show();
   $.ajax( {
     url: "https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch="
-    + searchValue + "&prop=revisions&rvprop=content&format=json",
+    + searchValue + "&srlimit=50&prop=revisions&rvprop=content&format=json",
     dataType: 'json',
     type: 'POST',
     headers: { 'Api-User-Agent': 'Example/1.0' },
@@ -20,12 +20,14 @@ function searchWiki(){
      resData = JSON.parse(resData);
     // console.log('Search results: ' + resData.query.search[0]);
      var search = resData.query.search;
+     console.log("Total: " + search.length);
      loading.hide();
      for(var i = 0; i<search.length; i++){
-       results.append("<a href='https://en.wikipedia.org/wiki/"+ search[i].title +
+       results.append("<div class='snippet'><a href='https://en.wikipedia.org/wiki/"+ search[i].title +
        "' target='_blank'<p><span class='title'>" + search[i].title + ":    </span>"
-       + search[i].snippet +"...</p></a>");
+       + search[i].snippet +"...</p></a></div>");
      }
+     $("#foot").css("position", "relative");
     }
 } );
 }
