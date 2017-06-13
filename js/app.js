@@ -16,19 +16,23 @@ function searchWiki(){
     headers: { 'Api-User-Agent': 'Example/1.0' },
     success: function(data) {
       var resData = JSON.stringify(data);
-    //  console.log(resData);
      resData = JSON.parse(resData);
-    // console.log('Search results: ' + resData.query.search[0]);
      var search = resData.query.search;
-     console.log("Total: " + search.length);
      loading.hide();
+     if(search.length==0){
+       results.append('<div><p>No results found for "' + searchValue
+       + '." Please try a different search term.</p></div>');
+     }
      for(var i = 0; i<search.length; i++){
        results.append("<div class='snippet'><a href='https://en.wikipedia.org/wiki/"+ search[i].title +
        "' target='_blank'<p><span class='title'>" + search[i].title + ":    </span>"
        + search[i].snippet +"...</p></a></div>");
      }
      $("#foot").css("position", "relative");
-    }
+   },
+   error: function(xhr,status,error){
+     console.log("error: " + error);
+   }
 } );
 }
 
