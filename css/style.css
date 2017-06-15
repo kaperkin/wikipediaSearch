@@ -1,8 +1,8 @@
 /*
 To Do:
-1. handle when there are no results. Example search: lsaifdj
-2. Move seach box and buttons up when resuts are posted
-3.
+1. handle when there are no results. Example search: lsaifdj DONE
+2. Move seach box and buttons up when resuts are posted DONE
+3. handle when searchValue==null DONE
 */
 
 body{
@@ -11,22 +11,26 @@ body{
   text-align: center;
 }
 
-.btn{
-  border-radius:10px;
-}
-
 .container{
   min-height: 560px;
 }
 
 .content{
-  padding: 20% 20% 0 20%;
+  font-size: 3rem;
+  margin: 20% 0;
+}
+
+.content a {
+  margin-left: 3%;
+}
+
+.content .btn{
+  font-size: 3rem;
+  vertical-align: unset;
 }
 
 input{
-  border-radius: 10px;
   color: #333;
-  margin-right: 5px;
 }
 
 .loading{

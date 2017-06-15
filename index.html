@@ -29,12 +29,15 @@
 </head>
 <body>
   <div class="container">
-    <div class="content">
-      <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" class="btn btn-default" id="random">
-        Random
-    </a>
+    <div class="content row" id="content">
+      <div class="row">
+    <input id="searchValue"></input>
+    <button class="btn btn-default" id="search"><span class="fa fa-search"></span> Search</button>
+    <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" class="btn btn-default" id="random">
+      Random
+  </a>
+  </div>
 
-    <input id="searchValue"></input><button class="btn btn-default" id="search"><span class="fa fa-search"></span> Search</button>
 </div>
 <div class="loading" id="loading"><i class="fa fa-spinner fa-pulse fa-3x fa-fw" aria-hidden="true"></i>
 </div>
