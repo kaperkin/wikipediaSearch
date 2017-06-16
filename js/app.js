@@ -28,10 +28,16 @@ function searchWiki(){
        + '." Please try a different search term.</p></div>');
      };
      $('#content').css({'margin': "5% 2% 0 5%"});
+     var count = 0;
      for(var i = 0; i<search.length; i++){
-       results.append("<div class='snippet'><a href='https://en.wikipedia.org/wiki/"+ search[i].title +
-       "' target='_blank'<p><span class='title'>" + search[i].title + ":    </span>"
-       + search[i].snippet +"...</p></a></div>");
+       results.append("<div class='col-lg-4 anchorContainer'><a href='https://en.wikipedia.org/wiki/"+ search[i].title +
+       "' target='_blank'><div class='snippetContainer'><p class='title'>" + search[i].title + "</p><p class='snippet'>"
+       + search[i].snippet +"...</p></div></a></div>");
+       count += 1;
+       if(count == 3){
+         results.append("<div class='row'></div>");
+         count = 0;
+       }
      }
    }
      $("#foot").css("position", "relative");
