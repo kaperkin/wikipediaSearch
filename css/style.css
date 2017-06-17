@@ -1,8 +1,8 @@
 /*
 To Do:
-1.
-2.
-3.
+1. format the text so that the article title is justified at the top left of the tile.
+2. Increase the width of the tiles relative to their heigth
+3. Increase the font size of the text snippet.
 */
 
 body{
@@ -70,20 +70,20 @@ input{
   min-height: 375px;
   padding:10px;
   background-color: rgb(163, 262, 125);
-  display: flex;
-  align-items: center;
-  justify-content: center
 }
 
 .snippet{
-  font-size: 2rem;
+  font-size: 2.25rem;
 }
 
 .title{
   font-weight: 600;
   font-size: 3rem;
   color: #333;
-  margin: 0;
+  margin-left: 0;
+  max-width:85%;
+  min-height: 100px;
+  text-align: left;
 }
 
 
