@@ -1,8 +1,8 @@
 /*
 To Do:
-1. format the text so that the article title is justified at the top left of the tile.
-2. Increase the width of the tiles relative to their heigth
-3. Increase the font size of the text snippet.
+1. 
+2.
+3.
 */
 
 body{
@@ -10,10 +10,6 @@ body{
   color: #555;
   font-size: 18px;
   text-align: center;
-}
-
-.col-lg-3{
-  margin-bottom: 30px;
 }
 
 .container{
@@ -66,14 +62,16 @@ input{
 
 .snippetContainer{
   border: 1px solid #fefefe;
-  border-radius: 10px;
-  min-height: 375px;
-  padding:10px;
+  border-radius: 5px;
+  height: 200px;
+  padding:5px 10px 0 10px;
   background-color: rgb(163, 262, 125);
 }
 
 .snippet{
-  font-size: 2.25rem;
+  font-size: 2rem;
+  max-height: 125px;
+  overflow: auto;
 }
 
 .title{
@@ -82,7 +80,8 @@ input{
   color: #333;
   margin-left: 0;
   max-width:85%;
-  min-height: 100px;
+  min-height: 60px;
+  overflow: auto;
   text-align: left;
 }
 
@@ -113,3 +112,19 @@ input{
 .foot p a:hover, .foot p a:active {
   color: rgb(10, 10, 30);
 }
+
+@media (max-width: 700px) {
+  .content, .content .btn{
+    font-size: 2rem;
+  }
+  .snippetContainer {
+    height: auto;
+    font-size: 1.25rem
+  }
+  .snippet{
+    max-height: inherit;
+  }
+  .title{
+    font-size: 2rem;
+  }
+  }
