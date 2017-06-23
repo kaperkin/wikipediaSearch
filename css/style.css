@@ -1,12 +1,12 @@
 /*
 To Do:
-1. 
+1.
 2.
 3.
 */
 
 body{
-  background-color:  #8fe895;
+  background-color:  #aaa;
   color: #555;
   font-size: 18px;
   text-align: center;
@@ -63,14 +63,14 @@ input{
 .snippetContainer{
   border: 1px solid #fefefe;
   border-radius: 5px;
-  height: 200px;
+  height: 240px;
   padding:5px 10px 0 10px;
   background-color: rgb(163, 262, 125);
 }
 
 .snippet{
   font-size: 2rem;
-  max-height: 125px;
+  max-height: 150px;
   overflow: auto;
 }
 
@@ -79,7 +79,6 @@ input{
   font-size: 3rem;
   color: #333;
   margin-left: 0;
-  max-width:85%;
   min-height: 60px;
   overflow: auto;
   text-align: left;
@@ -88,7 +87,7 @@ input{
 
 
 .foot {
-  background-color: rgb(63, 99, 78);
+  background-color: rgb(166,221,143);
   margin-bottom: 0;
   margin-left: 0;
   width: 100%;
@@ -100,13 +99,13 @@ input{
 }
 
 .foot p {
-  color:#fefefe;
+  color:#333;
   margin-bottom: 0;
   padding-top: 6px;
 }
 
 .foot p a {
-  color: #dfdfdf;
+  color: #555;
 }
 
 .foot p a:hover, .foot p a:active {
