@@ -1,6 +1,8 @@
 (function ($) {
 
 var search = $("#search");
+var height = $(window).height();   // returns height of browser viewport
+$('#bodyContainer').css("height", height);
 
 function searchWiki(){
   var searchValue = $('#searchValue').val();
@@ -28,11 +30,12 @@ function searchWiki(){
        + '." Please try a different search term.</p></div>');
      };
      $('#content').css({'margin': "5% 2% 0 5%"});
-     for(var i = 0; i<search.length; i++){
-       results.append("<div class='col-lg-6 anchorContainer'><a href='https://en.wikipedia.org/wiki/"+ search[i].title +
+     for(var i = 0; i<search.length; i+=2){
+       results.append("<div class='row'><div class='col-lg-6 anchorContainer'><a href='https://en.wikipedia.org/wiki/"+ search[i].title +
        "' target='_blank'><div class='snippetContainer'><p class='title'>" + search[i].title + "</p><p class='snippet'>"
-       + search[i].snippet.substring(0, 500) +"...</p></div></a></div>");
-      count += 1;
+       + search[i].snippet +"...</p></div></a></div><div class='col-lg-6 anchorContainer'><a href='https://en.wikipedia.org/wiki/"+ search[i].title +
+       "' target='_blank'><div class='snippetContainer'><p class='title'>" + search[i+1].title + "</p><p class='snippet'>"
+       + search[i+1].snippet +"...</p></div></a></div></div>");
      }
    }
      $("#foot").css("position", "relative");

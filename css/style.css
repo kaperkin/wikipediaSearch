@@ -1,7 +1,7 @@
 /*
 To Do:
-1.
-2.
+1. Set height of container by finding height of window DONE
+2. Set results to be displayed two to a row DONE
 3.
 */
 
@@ -61,10 +61,9 @@ input{
 }
 
 .snippetContainer{
-  border: 1px solid #fefefe;
+  border: 1px solid #333;
   border-radius: 5px;
-  height: 240px;
-  padding:5px 10px 0 10px;
+  padding: 10px;
   background-color: rgb(163, 262, 125);
 }
 
