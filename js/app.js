@@ -2,7 +2,7 @@
 
 var search = $("#search");
 var height = $(window).height();   // returns height of browser viewport
-$('#bodyContainer').css("height", height);
+$('#bodyContainer').css("min-height", height);
 
 function searchWiki(){
   var searchValue = $('#searchValue').val();
