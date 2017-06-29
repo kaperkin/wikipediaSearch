@@ -1,7 +1,7 @@
 /*
 To Do:
 1. Set min-height of container by finding height of window DONE
-2. 
+2.
 3.
 */
 
@@ -30,8 +30,13 @@ body{
   vertical-align: unset;
 }
 
+.form-inline .form-group{
+  display: inline;
+}
+
 input{
   color: #333;
+  padding:1rem;
 }
 
 .loading{
@@ -64,7 +69,7 @@ input{
   border: 1px solid #333;
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(163, 262, 125);
+  background-color: rgb(166,221,143);
 }
 
 .snippet{
@@ -93,14 +98,13 @@ input{
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100px;
   position: absolute;
+  padding: 25px 0 30px 0;
 }
 
 .foot p {
   color:#333;
   margin-bottom: 0;
-  padding-top: 6px;
 }
 
 .foot p a {

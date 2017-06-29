@@ -48,6 +48,7 @@ function searchWiki(){
 
 search.click( function(){
   searchWiki();
+  console.log("button clicked");
 });
 
 // add keybinding for enter to trigger submit click
