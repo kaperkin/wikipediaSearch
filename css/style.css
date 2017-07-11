@@ -11,13 +11,17 @@ body{
   font-size: 18px;
   text-align: center;
 }
-
+/*
 .container{
   min-height: 560px;
 }
+*/
+body, html, .container {
+  height: 100%;
+}
 
 .content{
-  font-size: 3rem;
+/*  font-size: 3rem; */
   margin: 20% 0 10% 0;
 }
 
@@ -26,7 +30,7 @@ body{
 }
 
 .content .btn{
-  font-size: 3rem;
+/*  font-size: 3rem; */
   vertical-align: unset;
 }
 
@@ -80,7 +84,7 @@ input{
 
 .title{
   font-weight: 600;
-  font-size: 3rem;
+/*  font-size: 3rem;*/
   color: #333;
   margin-left: 0;
   min-height: 60px;
