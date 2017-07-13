@@ -1,8 +1,8 @@
 /*
 To Do:
-1. Set min-height of container by finding height of window DONE
-2.
-3.
+1. Fix weird footer height DONE
+2. Remove extra row from content DONE
+3. More consistent styling
 */
 
 body{
@@ -11,31 +11,21 @@ body{
   font-size: 18px;
   text-align: center;
 }
-/*
-.container{
-  min-height: 560px;
-}
-*/
-body, html, .container {
+
+body, .container {
   height: 100%;
 }
 
 .content{
-/*  font-size: 3rem; */
   margin: 20% 0 10% 0;
 }
 
-.content a {
-  margin-left: 3%;
-}
-
 .content .btn{
-/*  font-size: 3rem; */
-  vertical-align: unset;
+  vertical-align: middle;
 }
 
 .form-inline .form-group{
-  display: inline;
+  vertical-align: unset;
 }
 
 input{
@@ -77,17 +67,16 @@ input{
 }
 
 .snippet{
-  font-size: 2rem;
   max-height: 150px;
   overflow: auto;
 }
 
 .title{
   font-weight: 600;
-/*  font-size: 3rem;*/
+  font-size: 2.5rem;
   color: #333;
   margin-left: 0;
-  min-height: 60px;
+  min-height: 40px;
   overflow: auto;
   text-align: left;
 }
@@ -132,5 +121,8 @@ input{
   }
   .title{
     font-size: 2rem;
+  }
+  .foot p {
+    text-align: center;
   }
   }
