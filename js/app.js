@@ -19,17 +19,18 @@ function searchWiki(){
     success: function(data) {
       if(data.error){
         loading.hide();
-        results.append("<div>Please enter a search term.</div>");
+        results.append("<div class='error'>Please enter a search term.</div>");
       } else{
       var resData = JSON.stringify(data);
      resData = JSON.parse(resData);
      var search = resData.query.search;
      loading.hide();
      if(search.length==0){
-       results.append('<div><p>No results found for "' + searchValue
+       results.append('<div class="error"><p>No results found for "' + searchValue
        + '." Please try a different search term.</p></div>');
-     };
-     $('#content').css({'margin': "5% 2% 0 5%"});
+     }
+     $('#content').css({'margin': "5% 0 0 0","text-align":"left"});
+
      for(var i = 0; i<search.length; i+=2){
        results.append("<div class='row'><div class='col-lg-6 anchorContainer'><a href='https://en.wikipedia.org/wiki/"+ search[i].title +
        "' target='_blank'><div class='snippetContainer'><p class='title'>" + search[i].title + "</p><p class='snippet'>"
@@ -37,8 +38,8 @@ function searchWiki(){
        "' target='_blank'><div class='snippetContainer'><p class='title'>" + search[i+1].title + "</p><p class='snippet'>"
        + search[i+1].snippet +"...</p></div></a></div></div>");
      }
-   }
      $("#foot").css("position", "relative");
+   }
    },
    error: function(xhr,status,error){
      console.log("error: " + error);
@@ -48,7 +49,6 @@ function searchWiki(){
 
 search.click( function(){
   searchWiki();
-  console.log("button clicked");
 });
 
 // add keybinding for enter to trigger submit click
@@ -57,7 +57,5 @@ $('#searchValue').keypress(function(e){
     search.click();//Trigger search button click event
   }
 });
-
-
 
 }(jQuery));

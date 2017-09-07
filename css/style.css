@@ -1,27 +1,45 @@
 /*
 To Do:
-1. Fix weird footer height DONE
-2. Remove extra row from content DONE
-3. More consistent styling
+1.
+2.
+3.
 */
 
 body{
-  background-color:  #aaa;
+  background-color:  #F5F5F5;
   color: #555;
   font-size: 18px;
-  text-align: center;
 }
 
 body, .container {
   height: 100%;
 }
 
+.btn-default{
+  background-image: none;
+}
+
 .content{
   margin: 20% 0 10% 0;
+  text-align: center;
 }
 
 .content .btn{
   vertical-align: middle;
+}
+
+.content h1{
+  font-size: 48px;
+}
+
+.error{
+  color: rgb(255,99,71);
+  font-size: 3rem;
+}
+
+.form-control:focus{
+  box-shadow: none;
+  border: none;
 }
 
 .form-inline .form-group{
@@ -36,6 +54,7 @@ input{
 .loading{
   display: none;
   margin-top: 30px;
+  text-align: center;
 }
 
 .results{
@@ -48,7 +67,8 @@ input{
 }
 
 .results a:focus, .results a:hover, .results a:focus .title, .results a:hover .title{
-  color:#fefefe;
+  color: #000;
+  transition: all .2s ease;
 }
 
 .results a{
@@ -62,8 +82,8 @@ input{
 .snippetContainer{
   border: 1px solid #333;
   border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(166,221,143);
+  padding: 1.25rem;
+  background-color: rgb(192,229,177);
 }
 
 .snippet{
@@ -84,7 +104,7 @@ input{
 
 
 .foot {
-  background-color: rgb(166,221,143);
+  background-color: rgb(192,229,177);
   margin-bottom: 0;
   margin-left: 0;
   width: 100%;
